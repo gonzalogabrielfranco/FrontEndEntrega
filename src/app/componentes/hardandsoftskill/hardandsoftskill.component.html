@@ -1,0 +1,17 @@
+<div class="hardandsoftskill .conteiner card shadow p-3 mb-4 bg-white rounded" *ngIf="hardsofskilllista.length!=0 || esAdmin">
+  <h2 class="card-title">Competencias Duras y Blandas</h2>
+  <div class="agregar" *ngIf="esAdmin">
+    <ul class="lista" >
+      <li class="btn" (click)="agregarCompetencia()"><img class="imagen" src="assets/imagenes/sistema/agregar.png"></li>
+      <li class="btn" (click)="editarCompetencia()" *ngIf="hardsofskilllista.length!=0"><img class="imagen" src="assets/imagenes/sistema/editar.png"></li>
+      <li class="btn" (click)="eliminarCompetencia()" *ngIf="hardsofskilllista.length!=0"><img class="imagen" src="assets/imagenes/sistema/eliminar.png"></li>
+    </ul>
+  </div>
+  <div *ngFor="let hafs of hardsofskilllista" class="has">
+    <h4 class="card-subtitle">{{hafs.nombre}}</h4>
+    <div class="progress">
+      <div class="progress-bar bg-success" role="progressbar" style="width: {{hafs.porcentaje}}%" [attr.aria-expanded]="hafs.porcentaje" aria-valuemin="0" aria-valuemax="100">{{hafs.porcentaje}}%</div>
+    </div>
+  </div>
+
+

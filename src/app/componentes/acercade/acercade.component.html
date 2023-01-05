@@ -1,0 +1,10 @@
+<div class="acercade .conteiner card shadow p-3 mb-4 bg-white rounded" *ngIf="persona.descripcion!='' || esAdmin">
+  <h2 class="card-title" >Acerca de</h2>
+  <p class="card-text">{{persona.descripcion}}</p>
+  <div class="editar" *ngIf="esAdmin">
+    <ul class="lista">
+      <li  (click)="editar()" class="btn"><img class="imagen" src="assets/imagenes/sistema/editar.png"></li>
+      <li class="btn" (click)="eliminar()"><img class="imagen" src="assets/imagenes/sistema/eliminar.png"></li>
+    </ul>
+  </div>
+</div>

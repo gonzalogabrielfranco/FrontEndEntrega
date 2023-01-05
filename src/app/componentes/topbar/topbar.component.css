@@ -1,0 +1,152 @@
+@media (min-width: 768px){
+  .bordesuperior{
+    position: relative;
+    border: 1px solid black;
+    /*height: 50px;*/
+    min-height:50px ;
+    background-color: #094166;
+  }
+  .imagenredesocial{
+    border-radius: 50%;
+  }
+  .github{
+    position: absolute;
+    top:2px;
+    width: 38px;
+    height: 38px;
+    border-radius: 40%;
+    padding: 1px;
+    background-color: white;
+  }
+  .linkedin{
+    display:inline;
+    position: relative;
+    margin-right: 3px;
+    margin-left: 3px;
+  }
+  .facebook{
+    position: absolute;
+    right: 150px;
+  }
+  .login{
+    position: absolute;
+    right: 35px;
+    top: 5px;
+  }
+  .nombre{
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    color:white;
+    padding: 5px;
+    left: 14px;
+  }
+  .lista{
+    position: absolute;
+    margin: 0px auto;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+  }
+  .principal{
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+  }
+  .editar{
+    top: 1px;
+  }
+  .agregar{
+    top: 1px;
+  }
+  .lista{
+    display:inline-flex;
+  }
+  .lista li{
+    list-style: none;
+    margin: 2px;
+  }
+  .imagen{
+    height: 25px;
+    width: 25px;
+  }
+
+}
+@media (min-width: 992px) {
+
+  .bordesuperior{
+    position: relative;
+    border: 1px solid black;
+    /*height: 50px;*/
+    min-height:50px ;
+    background-color: #094166;
+  }
+  .imagenredesocial{
+    border-radius: 50%;
+  }
+  .github{
+    position: absolute;
+    top:1px;
+    width: 45px;
+    height: 45px;
+    border-radius: 40%;
+    padding: 2px;
+    background-color: white;
+  }
+  .linkedin{
+    display:inline;
+    position: relative;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .facebook{
+    position: absolute;
+    right: 150px;
+  }
+  .login{
+    position: absolute;
+    right: 35px;
+    top: 5px;
+  }
+  .nombre{
+    position: absolute;
+    font-size: 25px;
+    font-weight: bold;
+    color:white;
+    padding: 5px;
+    left: 30px;
+  }
+  .lista{
+    position: absolute;
+    margin: 0px auto;
+    width: 60%;
+    height: 100%;
+    display: inline-flex;
+  }
+  .principal{
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+  }
+  .editar{
+    top: 1px;
+  }
+  .agregar{
+    top: 1px;
+  }
+  .lista{
+    display:inline-flex;
+  }
+  .lista li{
+    list-style: none;
+    margin: 5px;
+  }
+  .imagen{
+    height: 30px;
+    width: 30px;
+  }
+}
+
+
+
+

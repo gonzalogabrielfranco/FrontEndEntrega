@@ -1,0 +1,59 @@
+.experiencia{
+  position: relative;
+  left: 0.5%;
+  width: 99%;
+  border-radius: 10px;
+  /*padding: 10px;*/
+  margin-top: 10px;
+}
+.experiencia h3{
+  position: relative;
+  left: 160px;
+  width: 90%;
+}
+.experiencia h5{
+  position: relative;
+  left: 160px;
+  width: 90%;
+}
+.experiencia h4{
+  position: relative;
+  left: 160px;
+  width: 90%;
+}
+.experiencia p{
+  position: relative;
+  left: 160px;
+  width: 90%;
+}
+.imagenexperiencia{
+  position: absolute ;
+  background-size: cover;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+
+}
+.editar{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.agregar{
+  position: absolute;
+  right: 38px;
+  top: 15px;
+}
+.lista{
+  display:inline-flex;
+}
+.lista li{
+  list-style: none;
+  margin: 10px;
+}
+.imagen{
+  height: 30px;
+  width: 30px;
+}

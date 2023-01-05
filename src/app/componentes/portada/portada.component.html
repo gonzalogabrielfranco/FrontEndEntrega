@@ -1,0 +1,17 @@
+<div class="prueba .conteiner card shadow p-3 mb-4 bg-white rounded">
+  <div class="imagenes">
+    <img class="portada  card-img-top" src="{{persona.urlImagenPortada}}">
+    <img class="foto" src="{{persona.urlImagenPerfil}}">
+  </div>
+  <div id="info">
+    <h2 class="card-title">{{persona.nombre}} {{persona.apellido}}</h2>
+    <p class="card-subtitle">{{persona.titulo}}</p>
+    <p class="card-subtitle">{{persona.residencia}}</p>
+  <div class="editar"  *ngIf="esAdmin">
+    <ul class="lista" >
+      <li class="btn" (click)="editar()"><img class="imagen" src="assets/imagenes/sistema/editar.png"></li>
+      <li class="btn" (click)="eliminar()"><img class="imagen" src="assets/imagenes/sistema/eliminar.png"></li>
+    </ul>
+  </div>
+  </div>
+</div>

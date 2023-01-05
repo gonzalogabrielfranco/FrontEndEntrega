@@ -1,0 +1,19 @@
+<app-topbar (editar)="redessociales($event)"></app-topbar>
+<app-portada (editarPotada)="cerrarPersona($event)" (eliminarPersona)="cerrareliminarPersona($event)"></app-portada>
+<app-acercade (editarmostrar)="evento($event)"></app-acercade>
+<app-experiencia  (editarExperiencia)="editarExp($event)"  ></app-experiencia>
+<app-educacion (agregareducacion)="agregarEdu($event)" ></app-educacion>
+<app-hardandsoftskill (editarcompentecia)="eventoCompetencia($event)" ></app-hardandsoftskill>
+<app-proyecto (editarProyecto)="editarproyecto($event)"></app-proyecto>
+<app-acercadeeditar *ngIf="banModalAcercaDe" class="tamanio position" (editarmostrar)="evento($event)" ></app-acercadeeditar>
+<app-experienciaeditar *ngIf="banExperienciaEditar"  class="tamanioExperiencia posicionEperiencia" [id]="Experienciaid"  (cerrarventana)="eventoExperiencia($event)"></app-experienciaeditar>
+<app-educacioneditar *ngIf="banEducacionEditar" class="posicionEperiencia tamanioExperiencia" [ideducacion]="Educacionid" (cerrarventana)="eventoEducacion($event)"></app-educacioneditar>
+<app-proyectoeditar *ngIf="banProyectoEditar" class="tamanioProyecto posicionProyecto" [id]="ProyectoId" (cerrarVentana)="eventoProyecto($event)"></app-proyectoeditar>
+<app-competencias-editar *ngIf="banCompetenciaEditar" class="tamanioCompetencia posicionCompetencia" (eventoCompetencia)="cerrarCompentencia($event)"></app-competencias-editar>
+<app-competencias-agregar *ngIf="banCompetenciaAgregar" class="tamanioCompetencia posicionCompetencia" (eventoCompetencia)="cerrarCompentencia($event)"></app-competencias-agregar>
+<app-competenciaseliminar *ngIf="banCompetenciaEliminar" class="tamanioCompetencia posicionCompetencia" (eventoCompetencia)="cerrarCompentencia($event)"></app-competenciaseliminar>
+<app-persona-editar *ngIf="banPersonaEditar" class="posicionPersonaEditar tamanioPersonaEditar" (eventoPersona)="cerrarPersona($event)"></app-persona-editar>
+<app-redessocialesagregar *ngIf="banRedesSocialesAgregar" class="posicionredessociales tamanioredesociales" (agregar)="cerrarAgregarRedesSociales($event)"></app-redessocialesagregar>
+<app-redessocialeseliminar *ngIf="banRedesSocialesEliminar" class="posicionredessociales tamanioredesociales" (eliminaremitter)="cerrarEliminarRedesSociales($event)"></app-redessocialeseliminar>
+<app-redessocialeseditar *ngIf="banRedesSocialesEditar" class="posicionredessociales tamanioredesociales" (editar)="cerrarEditarRedesSociales($event)"></app-redessocialeseditar>
+<app-personaeliminar  *ngIf="banPersonaEliminar" class="posicionPersonaEliminar tamanioPersonaEliminar" (eventoPersona)="cerrareditarpersona($event)"></app-personaeliminar>

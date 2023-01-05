@@ -1,0 +1,66 @@
+<div class="card ventana" >
+  <form [formGroup]="formexperiencia" class="divinput">
+    <h3 class="title"> {{titulo}}</h3>
+    <p class="text-center texto text-black">Puesto *</p >
+    <input type="text" class="input" formControlName="puesto">
+    <div *ngIf="formexperiencia.controls.puesto.invalid && (formexperiencia.controls.puesto.dirty || formexperiencia.controls.puesto.touched)"
+         class="alert alert-danger alertapadre">
+      <div *ngIf="(formexperiencia.controls.puesto.errors)?.['required']">
+        El campo puesto es obligatorio.
+      </div>
+    </div>
+    <p class="text-center texto text-black">Nombre de la empresa *</p>
+    <input type="text" class="input" formControlName="nombreEmpresa">
+    <div *ngIf="formexperiencia.controls.nombreEmpresa.invalid && (formexperiencia.controls.nombreEmpresa.dirty || formexperiencia.controls.nombreEmpresa.touched)"
+         class="alert alert-danger alertapadre">
+      <div *ngIf="(formexperiencia.controls.nombreEmpresa.errors)?.['required']">
+        El campo nombre de la empresa es obligatorio.
+      </div>
+    </div>
+    <div class="divtiempo">
+      <p class="text-center texto text-black labeltiempoizquierdo">Fecha de inicio *</p>
+      <input type="date" class="inputtiempoizquiero" formControlName="fechaInicio">
+      <div *ngIf="formexperiencia.controls.fechaInicio.invalid && (formexperiencia.controls.fechaInicio.dirty || formexperiencia.controls.fechaInicio.touched)"
+           class="alert alert-danger alertapadre">
+        <div *ngIf="(formexperiencia.controls.fechaInicio.errors)?.['required']">
+          El campo fecha de inicio es obligatorio.
+        </div>
+      </div>
+      <p class="text-center texto text-black labeltiempoderecho">Fecha de finalización</p>
+      <input type="date" class="inputtiempoderecho" formControlName="fechaFin">
+    </div>
+    <p class="text-center texto text-black">Lugar *</p>
+    <input type="text" class="input" formControlName="lugar">
+    <div *ngIf="formexperiencia.controls.lugar.invalid && (formexperiencia.controls.lugar.dirty || formexperiencia.controls.lugar.touched)"
+         class="alert alert-danger alertapadre">
+      <div *ngIf="(formexperiencia.controls.lugar.errors)?.['required']">
+        El campo lugar es obligatorio.
+      </div>
+    </div>
+    <p class="text-center texto text-black">Descripcion</p>
+    <input type="text" class="input" formControlName="descripcion">
+    <p class="text-center texto text-black">Tipo Jornada *</p>
+    <select class="input" [value]="formexperiencia.controls.tipoJornada.value" formControlName="tipoJornada" >
+      <option value="1" >Jornada Completa</option>
+      <option value="2" >Jornada Parcial</option>
+    </select>
+    <div *ngIf="formexperiencia.controls.tipoJornada.invalid && (formexperiencia.controls.tipoJornada.dirty || formexperiencia.controls.tipoJornada.touched)"
+         class="alert alert-danger alertapadre">
+      <div *ngIf="(formexperiencia.controls.tipoJornada.errors)?.['required']">
+        El campo tipo jornada es obligatorio.
+      </div>
+    </div>
+    <p class="text-center texto text-black">Logo de la empresa</p>
+    <ul class="inputperfil">
+      <li><input type="file" accept=".jpeg, .png" class="input" formControlName="urlImagen" #inputlogoproyecto (change)="processFile(inputlogoproyecto)"></li>
+      <li><div class="progress progreso" *ngIf="progreso">
+        <div class="progress-bar" [class.bg-success]="progresoTerminado" role="progressbar" style="width:{{porcentaje}}%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{{porcentaje}}</div>
+      </div>
+      </li>
+    </ul>
+    <div class="divinputboton" >
+      <button type="button" class="btn btn-primary m-2" (click)="guardarExperiencia()" [disabled]="formexperiencia.status=='INVALID' || !formexperiencia.touched">Guardar</button>
+      <button type="button" class="btn btn-danger m-2" (click)="cerrar()">Cancelar</button>
+    </div>
+  </form>
+</div>

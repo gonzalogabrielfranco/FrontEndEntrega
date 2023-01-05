@@ -1,0 +1,162 @@
+@media (min-width: 768px){
+  .ventana{
+    height: 300px;
+    width: 500px;
+  }
+  .divinput {
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  .titulo{
+    text-align:center;
+    margin: 4px auto;
+    font-weight: bold;
+  }
+  .texto{
+    width: 65%;
+    margin: 5px auto;
+  }
+  .input{
+    width: 70%;
+    height: 30px;
+    margin:0px auto;
+  }
+  .divinputboton {
+    display: inline-flex;
+    margin: 10px auto;
+
+  }
+  .alertapadre{
+    display: flex;
+    width: 60%;
+    height: 8%;
+    font-size: 13px;
+    align-items: center;
+    margin: 0px auto;
+    justify-content: center;
+  }
+
+}
+@media (min-width: 992px) {
+  .ventana{
+    height: 350px;
+    width: 600px;
+  }
+  .divinput {
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  .titulo{
+    text-align:center;
+    margin: 10px auto;
+    font-weight: bold;
+  }
+  .texto{
+    width: 70%;
+    margin: 15px auto;
+  }
+  .input{
+    width: 55%;
+    height: 35px;
+    margin:0px auto;
+  }
+  .divinputboton {
+    display: inline-flex;
+    margin: 10px auto;
+
+  }
+  .alertapadre{
+    display: flex;
+    width: 60%;
+    height: 10%;
+    font-size: 15px;
+    align-items: center;
+    margin: 0px auto;
+    justify-content: center;
+  }
+
+}
+
+
+
+
+
+
+/*
+.title{
+  text-align:center;
+  margin: 4px auto;
+  font-weight: bold;
+}
+.ventana{
+  height: 330px;
+  width: 700px;
+}
+.divinput {
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.input{
+  width: 65%;
+  height: 35px;
+  margin:0px auto;
+}
+.texto{
+  width: 65%;
+  margin: 5px auto;
+}
+.divtiempo{
+  position: relative;
+  margin : 0px auto;
+  height: 85px;
+  width: 65%;
+
+}
+.inputtiempoizquiero{
+  position: absolute;
+  left: 20px;
+  top:50px;
+  width: 35%;
+  height: 35px;
+}
+.inputtiempoderecho{
+  position: absolute;
+  left: 250px;
+  top:50px;
+  width: 35%;
+  height: 35px;
+
+}
+.labeltiempoizquierdo{
+  position: absolute;
+  left: 0%;
+  top:0%;
+  width: 35%;
+
+}
+.labeltiempoderecho{
+  position: absolute;
+  left: 220px;
+  top:0%;
+  width: 35%;
+  height: 40px;
+
+}
+.divinputboton {
+  display: inline-flex;
+  margin: 10px auto;
+
+}
+.alertapadre{
+  display: flex;
+  width: 60%;
+  height: 10%;
+  font-size: 15px;
+  align-items: center;
+  margin: 0px auto;
+  justify-content: center;
+}
+**/

@@ -1,0 +1,22 @@
+<div class="card ventana"  >
+  <form class="divinput" [formGroup]="formulario">
+    <h3 class="titulo">Eliminar Redes Sociales </h3>
+    <p class="text-center texto text-black">Seleccione una Red Social</p >
+    <select  formControlName="nombre" class="input" (change)="cambioestado()">
+      <option *ngFor="let redes of listaredes">
+        {{redes.nombre}}</option>
+    </select>
+    <div *ngIf="formulario.controls.nombre.invalid && (formulario.controls.nombre.dirty || formulario.controls.nombre.touched)"
+         class="alert alert-danger alertapadre">
+      <div *ngIf="(formulario.controls.nombre.errors)?.['required']">
+        El campo red es obligatorio.
+      </div>
+    </div>
+    <p class="text-center texto text-black" >Url del perfil</p>
+    <input type="url" class="input" formControlName="url" [readOnly]="true">
+    <div class="divinputboton" >
+      <button type="button" class="btn btn-primary m-2" (click)="eliminar()"  >Eliminar</button>
+      <button type="button" class="btn btn-danger m-2" (click)="cerrar()" >Cancelar</button>
+    </div>
+  </form>
+</div>

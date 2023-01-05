@@ -1,0 +1,37 @@
+@media (min-width: 768px){
+  .login{
+    width:50%;
+    height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .login{
+    width:40%;
+    height: 300px;
+  }
+}
+
+.divinput {
+  margin: 10px ;
+
+}
+.input{
+  margin:0px auto;
+}
+.title{
+  text-align:center;
+  margin: 25px auto;
+
+}
+.alertapadre{
+  display: flex;
+  width: 60%;
+  height: 10%;
+  font-size: 15px;
+  align-items: center;
+  margin: 0px auto;
+  justify-content: center;
+}
+.boton{
+  margin-left: 4px;
+}

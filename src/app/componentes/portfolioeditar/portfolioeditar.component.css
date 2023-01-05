@@ -1,0 +1,124 @@
+@media (min-width: 768px){
+  .tamanio{
+    flex-direction:column ;
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+  }
+  .position{
+    position: fixed;
+    top: 8%;
+    left:25%;
+  }
+  .tamanioredesociales{
+    overflow-y: scroll;
+  }
+  .posicionredessociales{
+    position: fixed;
+    top: 5%;
+    left:18%;
+
+  }
+  .tamanioProyecto{
+    overflow-y: scroll;
+  }
+  .posicionProyecto{
+    position: fixed;
+    top: 5%;
+    left:10%;
+  }
+
+  .tamanioPersonaEditar{
+    overflow-y: scroll;
+  }
+  .posicionPersonaEditar{
+    position: fixed;
+    top: 1%;
+    left:10%;
+  }
+  .tamanioExperiencia{
+    overflow-y: scroll;
+  }
+  .posicionEperiencia{
+    position: fixed;
+    top: 1%;
+    left:6%;
+  }
+  .tamanioCompetencia{
+    overflow-y: scroll;
+  }
+  .posicionCompetencia{
+    position: fixed;
+    top: 5%;
+    left:18%;
+  }
+  .tamanioPersonaEliminar{
+    overflow-y: scroll;
+  }
+  .posicionPersonaEliminar{
+    position: fixed;
+    top: 5%;
+    left:18%;
+  }
+}
+@media (min-width: 992px) {
+  .tamanio{
+    flex-direction:column ;
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+  }
+  .position{
+    position: fixed;
+    top: 8%;
+    left:30%;
+  }
+  .tamanioredesociales{
+    overflow-y: scroll;
+  }
+  .posicionredessociales{
+    position: fixed;
+    top: 5%;
+    left:25%;
+  }
+  .tamanioProyecto{
+    overflow-y: scroll;
+  }
+  .posicionProyecto{
+    position: fixed;
+    top: 1%;
+    left:20%;
+  }
+  .tamanioPersonaEditar{
+    overflow-y: scroll;
+  }
+  .posicionPersonaEditar{
+    position: fixed;
+    top: 1%;
+    left:16%;
+  }
+  .tamanioExperiencia{
+    overflow-y: scroll;
+  }
+  .posicionEperiencia{
+    position: fixed;
+    top: 1%;
+    left:16%;
+  }
+  .tamanioCompetencia{
+    overflow-y: scroll;
+  }
+  .posicionCompetencia{
+    position: fixed;
+    top: 5%;
+    left:25%;
+  }
+  .tamanioPersonaEliminar{
+    overflow-y: scroll;
+  }
+  .posicionPersonaEliminar{
+    position: fixed;
+    top: 5%;
+    left:25%;
+  }
+}

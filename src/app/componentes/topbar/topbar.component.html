@@ -1,0 +1,30 @@
+<div class="container-fluid bordesuperior">
+  <div class="row">
+    <div class=" col-md-4">
+      <h2 class="nombre">{{nombre}}</h2>
+    </div>
+    <div class="col-md-1">
+      <div class="row">
+
+        <div class="editar col-md-12" *ngIf="esAdmin">
+          <ul class="lista">
+            <li class="btn" (click)="agregarredessociales()" *ngIf="banagregar"><img class="imagen" src="assets/imagenes/sistema/agregar.png"></li>
+            <li class="btn" (click)="editarredessociales()" *ngIf="baneditar"><img class="imagen" src="assets/imagenes/sistema/editar.png"></li>
+            <li class="btn" (click)="eliminarredessociales()" *ngIf="baneliminar"><img class="imagen" src="assets/imagenes/sistema/eliminar.png"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="facebook" >
+        <ul *ngFor="let redes of redesSociales"  class="linkedin">
+          <li  class="linkedin ">
+            <a href="{{redes.url}}" target="_blank"><img class="github" src="{{redes.urlImagen}}"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-success login" (click)="loginver()">{{nombreBoton}}</button>
+</div>

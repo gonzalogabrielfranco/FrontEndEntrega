@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="card ventana shadow-lg ventana">
+    <form [formGroup]="grupo" (submit)="guardar()">
+      <div class="card-title text-center title">
+        <h3 class="card-title">Editar Acerca de</h3>
+      </div>
+      <div class="divinput">
+        <textarea type="text" placeholder="Ingrese Informacion sobre usted" class="textarear" formControlName="inputacercade"></textarea>
+      </div>
+      <div class="divinput">
+        <button type="submit" class="btn btn-primary m-2" >Guardar</button>
+        <button type="button" class="btn btn-danger m-2" (click)="cancelar()"> Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>

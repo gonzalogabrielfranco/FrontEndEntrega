@@ -1,0 +1,30 @@
+.acercade{
+  position: relative;
+  left:0.5%;
+  width:99%;
+  border-radius: 10px;
+}
+.acercade h3{
+  position: relative;
+  left: 10px;
+}
+.acercade p{
+  position: relative;
+  left: 10px;
+}
+.editar{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.lista{
+  display:inline-flex;
+}
+.lista li{
+  list-style: none;
+  margin: 10px;
+}
+.imagen{
+  height: 30px;
+  width: 30px;
+}

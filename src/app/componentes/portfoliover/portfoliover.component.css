@@ -1,0 +1,9 @@
+.sobre{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 20%;
+  left: 35%;
+  width: 100%;
+}
+

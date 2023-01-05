@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="card ventana">
+    <form  class="divinput" [formGroup]="formulario">
+      <div class="row justify-content-center m-4">
+        <h3 class="titulo"> Eliminar Datos Persona</h3>
+      </div>
+      <div class="row">
+        <input type="checkbox" class="col-md-2 gy-2" formControlName="datos">
+        <p class="text-center text-black col-md-4">Informacion de Portada </p>
+        </div>
+      <div class="row" >
+        <input type="checkbox" class="col-md-2 g-2" [hidden]="persona.urlImagenPortada==''" formControlName="fotoportada">
+        <p class="text-center text-black col-md-4"  [hidden]="persona.urlImagenPortada==''"> Foto de Portada</p>
+      </div>
+      <div class="row " >
+        <input type="checkbox" class="col-md-2 gy-2" [hidden]="persona.urlImagenPerfil==''" formControlName="fotoperfil">
+        <p class="text-center text-black col-md-4" [hidden]="persona.urlImagenPerfil==''">Foto de Perfil</p>
+      </div>
+      <div class="row divinputboton" >
+        <div class="divinputboton">
+          <button type="button" class="btn btn-primary m-2" (click)="eliminar()" [disabled]="!(formulario.controls.datos.value || formulario.controls.fotoperfil.value || formulario.controls.fotoportada.value)">Eliminar</button>
+          <button type="button" class="btn btn-danger m-2" (click)="cerrarModal()">Cancelar</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+

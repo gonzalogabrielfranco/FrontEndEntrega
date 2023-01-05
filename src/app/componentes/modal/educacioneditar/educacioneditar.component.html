@@ -1,0 +1,47 @@
+<div class="card ventana" >
+  <form class="divinput" [formGroup]="formulario">
+    <h3 class="title"> {{titulo}}</h3>
+    <p class="text-center texto text-black">Titulo *</p >
+    <input type="text" class="input" formControlName="titulo">
+    <div *ngIf="formulario.controls.titulo.invalid && (formulario.controls.titulo.dirty || formulario.controls.titulo.touched)"
+         class="alert alert-danger alertapadre">
+      <div *ngIf="(formulario.controls.titulo.errors)?.['required']">
+        El campo titulo es obligatorio.
+      </div>
+    </div>
+    <p class="text-center texto text-black">Nombre de la Institucion *</p>
+    <input type="text" class="input" formControlName="nombreInstitucion">
+    <div *ngIf="formulario.controls.nombreInstitucion.invalid && (formulario.controls.nombreInstitucion.dirty || formulario.controls.nombreInstitucion.touched)"
+         class="alert alert-danger alertapadre">
+      <div *ngIf="(formulario.controls.nombreInstitucion.errors)?.['required']">
+        El campo Nombre Institucion es obligatorio.
+      </div>
+    </div>
+    <div class="divtiempo">
+      <p class="text-center texto text-black labeltiempoizquierdo">Fecha de inicio *</p>
+      <input type="date" class="inputtiempoizquiero" formControlName="fechaInicio">
+      <div *ngIf="formulario.controls.fechaInicio.invalid && (formulario.controls.fechaInicio.dirty || formulario.controls.fechaInicio.touched)"
+           class="alert alert-danger alertapadre">
+        <div *ngIf="(formulario.controls.fechaInicio.errors)?.['required']">
+          El campo fecha inicio  es obligatorio.
+        </div>
+      </div>
+      <p class="text-center texto text-black labeltiempoderecho">Fecha de finalización</p>
+      <input type="date" class="inputtiempoderecho" formControlName="fechaFin">
+    </div>
+    <p class="text-center texto text-black">LinkTitulo</p>
+    <input type="url" class="input" formControlName="linkTitulo">
+    <p class="text-center texto text-black">Logo de la Institucion</p>
+    <ul class="inputperfil">
+      <li><input type="file" accept=".jpeg, .png" class="input" formControlName="urlImagen" #inputlogoproyecto (change)="processFile(inputlogoproyecto)"></li>
+      <li><div class="progress progreso" *ngIf="progreso">
+        <div class="progress-bar" [class.bg-success]="progresoTerminado" role="progressbar" style="width:{{porcentaje}}%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{{porcentaje}}</div>
+      </div>
+      </li>
+    </ul>
+    <div class="divinputboton" >
+      <button type="button" class="btn btn-primary m-2" (click)="guardarEducacion()" [disabled]="formulario.status=='INVALID' || !formulario.touched">Guardar</button>
+      <button type="button" class="btn btn-danger m-2" (click)="cerrar()">Cancelar</button>
+    </div>
+  </form>
+</div>

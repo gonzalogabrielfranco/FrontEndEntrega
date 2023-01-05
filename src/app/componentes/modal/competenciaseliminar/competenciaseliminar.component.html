@@ -1,0 +1,20 @@
+<div class="card ventana"  >
+  <form class="divinput" [formGroup]="formulario">
+    <h3 class="titulo">Eliminar Competencia </h3>
+    <p class="text-center texto text-black">Seleccione una Red Social</p >
+    <select  formControlName="seleccionado" class="input"  (change)="cambioestado()">
+      <option *ngFor="let elemento of lista" >
+        {{elemento.nombre}}
+      </option>
+    </select>
+
+    <p class="text-center texto text-black">Nombre Competencia</p>
+    <input type="text" class="input" formControlName="nombre" [readOnly]="desactivado" >
+    <p class="text-center texto text-black">Porcentaje</p>
+    <input type="number" [min]="0" [max]="100" class="input" formControlName="porcentaje" [readonly]="desactivado">
+    <div class="divinputboton" >
+      <button type="button" class="btn btn-primary m-2" (click)="eliminarCompetencia()">Eliminar</button>
+      <button type="button" class="btn btn-danger m-2" (click)="cerrarVentana()">Cancelar</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,22 @@
+<div  class="experiencia .container card shadow p-3 mb-4 bg-white rounded" *ngIf="experienciaslista.length!=0 || esAdmin">
+  <h2 class="card-title">Experciencia</h2>
+  <div class="agregar" *ngIf="esAdmin">
+    <button class="btn" (click)="agregar()"><img class="imagen" src="assets/imagenes/sistema/agregar.png"></button>
+  </div>
+  <div *ngFor="let ex of experienciaslista" class="card shadow-sm p-3 mb-3 bg-white rounded">
+    <h3 class="card-title">{{ex.puesto}}</h3>
+    <img class="imagenexperiencia" src="{{ex.urlImagen}}">
+    <h5 class="card-text">{{ex.nombreEmpresa}} - {{ex.tipoJornada}}</h5>
+    <h5 class="card-text">Desde: {{this.convertirfechastring(ex.fechaInicio)}}  - Hasta: {{this.convertirfechastring(ex.fechaFin)}} </h5>
+    <h5 class="card-text">Tiempo trabajo: {{this.calculoExperiencia(ex.fechaInicio,ex.fechaFin)}}</h5>
+    <h5 class="card-text">{{ex.lugar}}</h5>
+    <p class="card-text">{{ex.descripcion }}</p>
+    <div class="editar" *ngIf="esAdmin">
+      <ul class="lista" >
+        <li class="btn" (click)="editar(ex.id)"><img class="imagen" src="assets/imagenes/sistema/editar.png"></li>
+        <li class="btn" (click)="eliminar(ex.id)"><img class="imagen" src="assets/imagenes/sistema/eliminar.png"></li>
+      </ul>
+    </div>
+  </div>
+
+</div>

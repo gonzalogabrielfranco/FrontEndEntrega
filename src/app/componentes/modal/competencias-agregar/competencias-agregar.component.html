@@ -1,0 +1,32 @@
+
+<div class="card ventana"  >
+  <form class="divinput" [formGroup]="formulario">
+    <h3 class="titulo">Agregar Competencia </h3>
+    <p class="text-center texto text-black">Nombre Competencia *</p>
+    <input type="text" class="input" formControlName="nombre">
+    <div *ngIf="formulario.controls.nombre.invalid && (formulario.controls.nombre.dirty || formulario.controls.nombre.touched)"
+         class="alert alert-danger alertapadre">
+      <div *ngIf="(formulario.controls.nombre.errors)?.['required']">
+        El nombre es obligatorio.
+      </div>
+    </div>
+    <p class="text-center texto text-black">Porcentaje *</p>
+    <input type="number" [min]="0" [max]="100" class="input" formControlName="porcentaje">
+    <div *ngIf="formulario.controls.porcentaje.invalid && (formulario.controls.porcentaje.dirty || formulario.controls.porcentaje.touched)"
+         class="alert alert-danger alertapadre ">
+      <div *ngIf="(formulario.controls.porcentaje.errors)?.['required']">
+        El porcentaje is obligatorio.
+      </div>
+      <div *ngIf="(formulario.controls.porcentaje.errors)?.['min']">
+        El valor debe ser mayor a 0.
+      </div>
+      <div *ngIf="(formulario.controls.porcentaje.errors)?.['max']">
+        El valor debe ser menor a 100.
+      </div>
+    </div>
+    <div class="divinputboton" >
+      <button type="button" class="btn btn-primary m-2" (click)="guardarCompenencia()" [disabled]="formulario.status=='INVALID'">Guardar</button>
+      <button type="button" class="btn btn-danger m-2" (click)="cerrarVentana()">Cancelar</button>
+    </div>
+  </form>
+</div>

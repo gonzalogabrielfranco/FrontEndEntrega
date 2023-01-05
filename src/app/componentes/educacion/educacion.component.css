@@ -1,0 +1,54 @@
+.educacion{
+  position: relative;
+  left: 0.5%;
+  width: 99%;
+  border-radius: 10px;
+  /*padding: 10px;*/
+  margin-top: 10px;
+}
+.educacion h3{
+  position: relative;
+  left: 160px;
+  width: 90%;
+}
+.educacion h5{
+  position: relative;
+  left: 160px;
+  width: 90%;
+}
+.educacion time{
+  position: relative;
+  left: 160px;
+  width: 90%;
+}
+
+.imageneducacion{
+  position: absolute ;
+  top: 10px;
+  left: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+.editar{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.agregar{
+  position: absolute;
+  right: 38px;
+  top: 15px;
+}
+
+.lista{
+  display:inline-flex;
+}
+.lista li{
+  list-style: none;
+  margin: 10px;
+}
+.imagen{
+  height: 30px;
+  width: 30px;
+}
